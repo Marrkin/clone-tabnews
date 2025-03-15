@@ -8,10 +8,8 @@ async function query(queryObject) {
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
 
-    //Temporario!
-    ssl: {
-      rejectUnauthorized: false,
-    },
+    ssl: process.env.NODE_ENV === 'development' ? false : true
+
   });
   await client.connect();
 
