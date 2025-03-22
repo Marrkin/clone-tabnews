@@ -13,7 +13,7 @@ export default async function migrations(request, response) {
       dryRun: true,
       verbose: true,
     });
-    return response.status(200).json([migrations]); //Aqui é o nosso retorno à VIEW
+    return response.status(200).json(migrations); //Aqui é o nosso retorno à VIEW
   }
 
   if (request.method === "POST") {
@@ -25,7 +25,7 @@ export default async function migrations(request, response) {
       dryRun: false,
       verbose: true,
     });
-    return response.status(200).json([migrations]);
+    return response.status(200).json(migrations);
   }
 
   return response.status(405).end(); //Method not Allowed
