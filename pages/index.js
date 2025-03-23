@@ -1,4 +1,3 @@
-
 function Home() {
   return <h1>Isso definitivamente não é uma mensagem de teste! 🐍</h1>;
 }
